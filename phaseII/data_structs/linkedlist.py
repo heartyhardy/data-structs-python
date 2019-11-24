@@ -47,7 +47,7 @@ class LinkedList(object):
 
                 if cursor == pos:
                     return current
-                    
+
             return None
     
 
@@ -55,7 +55,7 @@ class LinkedList(object):
     *** Inserts an element to the Linkedlist at the given position.
     *** If the position does not exists throws an error
     """
-    def insert(self, pos, element):
+    def insert(self, element, pos):
         current = self.head
         cursor = 0
 
@@ -63,11 +63,15 @@ class LinkedList(object):
             return self.head
         
         while current.next:
+            previous = current
             current = current.next
             cursor += 1
 
             if cursor == pos:
-                return current
+                previous.next = element
+                element.next = current
+                return
+        current.next = element
         return None
 
 
