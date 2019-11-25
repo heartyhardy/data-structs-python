@@ -19,6 +19,14 @@ ll.insert(el5, 4)
 # print(ll.get(3).value)
 # print(ll.get(4).value)
 
+# current = ll.head
+# while current:
+#     print(current.value)
+#     current = current.next
+
+
+ll.delete(7)
+
 current = ll.head
 while current:
     print(current.value)
