@@ -4,7 +4,7 @@ from bubblesort import bubblesort
 
 def gen_arr(n):
     data = []
-    for i in range(n):
+    for _i in range(n):
         data.append(randint(0, 100))
     return data
         
